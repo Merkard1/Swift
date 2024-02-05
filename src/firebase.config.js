@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBS8dGaq0WH4y7rBeA2y05R96WIFeAgU1s",
+  apiKey: process.env.FIREBASE_CONFIG_API_KEY,
   authDomain: "swift-homes-app.firebaseapp.com",
   projectId: "swift-homes-app",
   storageBucket: "swift-homes-app.appspot.com",
-  messagingSenderId: "930511307815",
-  appId: "1:930511307815:web:6a310a6cf3f861769a7a02",
+  messagingSenderId: process.env.FIREBASE_CONFIG_SENDER_ID,
+  appId: process.env.FIREBASE_CONFIG_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

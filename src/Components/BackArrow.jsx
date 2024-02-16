@@ -8,6 +8,7 @@ function BackArrow() {
   const returnBack = () => {
     navigate(-1);
   };
+
   return (
     <div className="shareIconDiv backArrow" onClick={returnBack}>
       <img

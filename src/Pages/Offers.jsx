@@ -30,7 +30,7 @@ function Offers() {
           listingsRef,
           where("offer", "==", true),
           orderBy("timestamp", "desc"),
-          limit(1)
+          limit(10)
         );
 
         const querySnap = await getDocs(q);
@@ -65,7 +65,7 @@ function Offers() {
         where("offer", "==", true),
         orderBy("timestamp", "desc"),
         startAfter(lastFetchedListing),
-        limit(1)
+        limit(10)
       );
 
       const querySnap = await getDocs(q);
@@ -112,10 +112,12 @@ function Offers() {
             </ul>
             <br />
             <br />
-            {lastFetchedListing && (
+            {lastFetchedListing ? (
               <p className="loadMore" onClick={onFetchMoreListings}>
                 Load More
               </p>
+            ) : (
+              <p className="noMoreLoad">No more listings availible</p>
             )}
           </main>
         </>

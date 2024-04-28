@@ -15,23 +15,23 @@ function Explore() {
       <main>
         {/* <Spinner /> */}
 
-        <p className="exploreCategoryHeading">Category</p>
+        <p className="exploreCategoryHeading">Category's</p>
         <div className="exploreCategories">
           <Link to="/category/rent">
+            <p className="exploreCategoryName">Places for rent</p>
             <img
               src={rentCategotyImage}
               alt="rent image"
               className="exploreCategoryImg"
             />
-            <p className="exploreCategoryName">Places for rent</p>
           </Link>
           <Link to="/category/sale">
+            <p className="exploreCategoryName">Places for sell</p>
             <img
               src={sellCategotyImage}
               alt="sell image"
               className="exploreCategoryImg"
             />
-            <p className="exploreCategoryName">Places for sell</p>
           </Link>
         </div>
       </main>

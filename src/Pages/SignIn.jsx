@@ -11,8 +11,8 @@ import { OAuth } from "../Components";
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "test@test.com",
+    password: "Test1234!",
   });
   const { email, password } = formData;
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ function SignIn() {
       toast.success("Success");
 
       if (userCredential.user) {
-        navigate("/");
+        navigate("/profile");
       }
     } catch (error) {
       toast.error("Bad User Credentials");

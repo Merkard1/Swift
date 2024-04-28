@@ -8,7 +8,18 @@ function Navbar() {
   const [active, setActive] = useState(0);
 
   const navigate = useNavigate();
-  // const location = useLocation();
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname);
+    if (location.pathname === "/") {
+      setActive(0);
+    } else if (location.pathname === "/offers") {
+      setActive(1);
+    } else {
+      setActive(2);
+    }
+  });
 
   const onClickNavElem = (elem, path) => {
     setActive(elem);

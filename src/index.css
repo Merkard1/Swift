@@ -365,6 +365,12 @@ nav ul li.active .navIcon {
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .socialLogin {
+    margin: 0;
+  }
+}
+
 .socialIconDiv {
   cursor: pointer;
   display: flex;
@@ -391,6 +397,12 @@ nav ul li.active .navIcon {
   font-weight: 600;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 1080px) {
+  .registerLink {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1217px) {

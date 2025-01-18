@@ -232,32 +232,6 @@ nav ul li.active .navIcon {
   transition: 0.5s;
 }
 
-.indicator::before {
-  content: "";
-  position: absolute;
-  top: 62%;
-  left: -30px;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  /* background-color: red; */
-  border-top-right-radius: 20px;
-  box-shadow: -1px 0px 0 0 #f2f4f8;
-}
-
-.indicator::after {
-  content: "";
-  position: absolute;
-  top: 62%;
-  left: 55px;
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  /* background-color: red; */
-  border-top-left-radius: 20px;
-  box-shadow: -1px 0px 0 0 #f2f4f8;
-}
-
 .listItem.active:nth-child(1) ~ .indicator {
   transform: translateX(calc(-103px));
 }

@@ -12,12 +12,16 @@ function Navbar() {
 
   useEffect(() => {
     console.log(location.pathname);
-    if (location.pathname === "/") {
-      setActive(0);
+    if (
+      location.pathname === "/sign-in" ||
+      location.pathname === "/profile" ||
+      location.pathname === "/forgot-password"
+    ) {
+      setActive(2);
     } else if (location.pathname === "/offers") {
       setActive(1);
     } else {
-      setActive(2);
+      setActive(0);
     }
   });
 
